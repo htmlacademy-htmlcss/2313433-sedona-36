@@ -5,6 +5,7 @@
   src: url ("fonts/ptsans-400.woff2") format("woff2");
   font-display: swap;
 }
+
 @font-face {
   font-family: "PT sans";
   font-style: normal;
@@ -12,17 +13,40 @@
   src: url("fonts/ptsans-700.woff2") format("woff2");
   font-display: swap;
 }
+
+html {
+  height: 100%;
+}
+
 body {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
   font-family: "PT sans", sans-serif;
   font-size: 16px;
   line-height: 24px;
   color: #000000;
   background-color: #ffffff;
+
 }
+
 .page-header {
   color: #000000;
   background-color: #ffffff;
 }
+.logo {
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 64px;
+}
+
+ul. {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
 .button {
   font-family: inherit;
   font-size: 16px;
@@ -34,11 +58,24 @@ body {
   text-decoration: none;
   text-transform: uppercase;
 }
-.page-header {
-  color: #ffffff;
-  background: #000000;
+.navigation-list {
+  display: flex;
+  flex-wrap: wrap;
+  width: 507px;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
 }
+
+.navigation {
+  display: flex;
+  width: 1200px;
+  margin: 0 auto;
+}
+
 .navigation-link {
+  display: block;
+  padding: 24px 19px;
   font-family: "PT sans", sans-serif;
   line-height: 24px;
   font-weight: 700;
@@ -48,6 +85,60 @@ body {
   text-decoration: none;
   text-transform: uppercase;
 }
+
+.navigation-user {
+  max-width: 270px;
+  margin-left: auto;
+}
+
+.navigation-user .navigation-link {
+  min-width: 18px;
+  min-height: 18px;
+}
+
+.advantages {
+  margin-bottom: 58px;
+}
+
+/* иконки поиска и избранного */
+.navigation-item-search .navigation-link {
+  background-color: #ffffff;
+  background-image: url("../images/search-icon.svg");
+  background-size: 20px 20px;
+  width: 20px;
+  height: 20px;
+  display: block;
+  background-repeat: no-repeat;
+}
+
+.navigation-item-favorites .navigation-link{
+  background-color: #ffffff;
+  background-image: url("../images/favourites-icon.svg");
+  background-size: 18px 17px;
+  width:18px;
+  height: 17px;
+  display: block;
+  background-repeat: no-repeat;
+}
+
+.main-container{
+  flex-grow: 1;
+  padding-top: 64px;
+  padding-bottom: 60px;
+}
+.main-index {
+  color: #000000;
+  background-color: #ffffff;
+  background-size: 100% auto;
+  background-repeat:no-repeat ;
+}
+
+.page-container {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+/* седона логотипы */
 .hero {
   color: #000000;
   background-color: #ffffff;
@@ -55,6 +146,7 @@ body {
   background-size: 100% auto;
   background-repeat: no-repeat;
 }
+
 .subtitle-welcome {
   background-image: url("../images/welcome.svg");
   background-size: 100% auto;
@@ -62,6 +154,7 @@ body {
   height: 213px;
   background-repeat: no-repeat;
 }
+
 .subtitle-to-the-gorgeous {
   background-image: url("../images/to-the-gorgeous.svg");
   background-size: 100% auto;
@@ -69,6 +162,7 @@ body {
   height: 29px;
   background-repeat: no-repeat;
 }
+
 .title-sedona-logo {
   background-image: url("../images/sedona-logo.svg");
   background-size: 100% auto;
@@ -76,40 +170,100 @@ body {
   height: 212px;
   background-repeat: no-repeat;
 }
+
+/* преимущества */
 .advantages {
   text-align: center;
 }
+
 .visually-hidden {
-  display: none ;
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
+
+.advantages-list {
+  flex-wrap: wrap;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  color: #ffffff;
+}
+
+/* блоки */
+.advantages-item-dark-blue {
+  width: 100%;
+  background-color: #82B3D3;
+  display: flex;
+}
+
+.advantages-item-dark-blue .advantages-title,
+.advantages-item-dark-blue .advantages-description {
+  color: #ffffff;
+}
+
+.advantages-item-light-blue{
+  width: 33.3%;
+  background-color: rgba(131, 179, 211, 0.12);
+}
+
+.advantages-item-light-blue .advantages-title,
+.advantages-item-light-blue  .advantages-description {
+  color: #000000;
+}
+
+.advantages-item-middle-blue {
+  width: 33.3%;
+  background-color: rgba(131, 179, 211, 0.2);
+}
+
+.advantages-item-middle-blue .advantages-title,
+.advantages-item-middle-blue  .advantages-description {
+  color: #000000;
+}
+
+
+/* текст главная */
 .explanation {
   font-size: 22px;
   line-height: 26px;
   text-align: center;
 }
-.advantages-description-blue {
+
+.advantages-description {
   color: #000000;
   font-size: 18px;
   line-height: 21px;
 }
+
 .service-title {
   font-size: 30px;
   line-height: 36px;
   text-align: center;
 }
+
 .h2 {
   font-size: 30px;
   line-height: 36px;
   text-align: center;
 }
+
 .services-name {
   font-size: 24px;
   line-height: 28px;
 }
+
 .explanation-services {
   font-size: 18px;
   line-height: 21px;
 }
+
 .search-title {
   font-size: 30px;
   line-height: 36px;
@@ -122,7 +276,20 @@ body {
   text-align: center;
 }
 
+.subscription {
+  font-size: 30px;
+  line-height: 36px;
+  text-transform: uppercase;
+}
 
+.subscription-explanation {
+  font-size: 22px;
+  line-height: 26px;
+  text-transform: uppercase;
+}
+
+
+/* иконки жилье еда сувениры */
 .services-item-icon-house {
   background-image: url("../images/house-service-icon.svg");
   background-size: 100% auto;
@@ -130,6 +297,7 @@ body {
   height: 72px;
   background-repeat: no-repeat;
 }
+
 .services-item-icon-food {
   background-image: url("../images/food-icon.svg");
   background-size: 100% auto;
@@ -137,6 +305,7 @@ body {
   height: 70px;
   background-repeat: no-repeat;
 }
+
 .services-item-icon-souvenirs {
   background-image: url("../images/souvenirs-icon.svg");
   background-size: 100% auto;
@@ -145,47 +314,87 @@ body {
   background-repeat: no-repeat;
 }
 
+/* блок жилье еда сувениры */
+.services-list {
+  display: flex;
+}
+.services-item-house {
+  height: 385px;
+  width: 33%;
+  background-color: rgba(131, 179, 211, 0.12);
+}
+.services-item-food {
+  height: 385px;
+  width: 33%;
+  background-color: #ffffff;
+}
 
+.services-item-souvenirs {
+  height: 385px;
+  width: 33%;
+  background-color: rgba(131, 179, 211, 0.12);
+}
+
+/* блок подписаться */
 .subscription-pic {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 415px;
   color: #ffffff;
   background-color: #000000;
   background-image: url("../images/subscription-background.jpg");
   background-size: 100% auto;
   background-repeat: no-repeat;
 }
-.subscription {
-  font-size: 30px;
-  line-height: 36px;
-  text-transform: uppercase;
-}
-.subscription-explanation {
-  font-size: 22px;
-  line-height: 26px;
-  text-transform: uppercase;
+.subscription-pic .subscription {
+  text-align: center;
 }
 
-
-.advantages-item-dark-blue {
-  background-color: #82B3D3;
+/* социальные сети футер*/
+.page-footer {
+  width: 1200px;
+  margin: 0 auto;
+  display: flex;
 }
 
-.advantages-item-dark-blue .advantages-title,
-.advantages-item-dark-blue .advantages-description {
-  color: #ffffff;
+.footer-social-list{
+  display: flex;
+  padding: 0;
 }
-.advantages-item-light-blue{
-  background-color: rgba(131, 179, 211, 0.12);
+
+.footer-social-list .link {
+  display: block;
+  height: 40px;
+  width: 47px;
 }
-.advantages-item-light-blue .advantages-title,
-.advantages-item-light-blue  .advantages-description {
-  color: #000000;
+.footer-social-item-vk .link {
+  background-color: #ffffff;
+  background-image: url("../images/vk.svg");
+  background-size: 24px 14px;
+  background-position: center;
+  display: block;
+  background-repeat: no-repeat;
 }
-.advantages-item-middle-blue {
-  background-color: rgba(0, 0, 0, 0.25);
+
+.footer-social-item-telega .link {
+  background-color: #ffffff;
+  background-image: url("../images/telegram.svg");
+  background-size: 18px 15px;
+  background-position: center;
+  display: block;
+  background-repeat: no-repeat;
 }
-.advantages-item-middle-blue .advantages-title,
-.advantages-item-middle-blue  .advantages-description {
-  color: #000000;
+
+.footer-social-item-youtube .link  {
+  background-color: #ffffff;
+  background-image: url("../images/youtube.svg");
+  background-size: 22px 17px;
+  background-position: center;
+  display: block;
+  background-repeat: no-repeat;
 }
 
 .contacts-phone {
@@ -193,91 +402,70 @@ body {
   font-size: 40px;
   line-height: 40px;
   text-decoration: none;
+  margin: 0 auto;
 }
 
-
-.navigation-item-search .navigation-link {
-  background-color: #ffffff;
-  background-image: url("../images/search-icon.svg");
-  background-size: 20px 20px;
-  width: 20px;
-  height: 20px;
+.label {
   display: block;
-  background-repeat: no-repeat;
+  width: 115px;
+  height: 33px;
+  background-image: url("../images/logo-htmlacademy.svg");
 }
-.navigation-item-favorites .navigation-link{
+.footer-logo {
+  width: 141px;
+}
+
+/* каталог */
+.catalog-logo{
+  width: 140px;
+  height: 70px;
+  background-image: url("../images/logo.svg");
+}
+
+.main-inner {
+  display: flex;
+  color: #242424;
   background-color: #ffffff;
-  background-image: url("../images/favourites-icon.svg");
-  background-size: 18px 17px;
-  width:18px;
-  height: 17px;
-  display: block;
-  background-repeat: no-repeat;
+  background-image: url("../images/catalog-background.jpg");
+  margin: 0 auto;
+  width: 1200px;
+  background-repeat:no-repeat;
 }
 
-.footer-social-item-vk {
-  background-color: #ffffff;
-  background-image: url("../images/vk.svg");
-  background-size: 24px 14px;
-  width:24px;
-  height: 14px;
-  display: block;
-  background-repeat: no-repeat;
+.catalog-products {
+  display: flex;
 }
-.footer-social-item-telega {
-  background-color: #ffffff;
-  background-image: url("../images/telegram.svg");
-  background-size: 18px 15px;
-  width:18px;
-  height: 15px;
-  display: block;
-  background-repeat: no-repeat;
-}
-.footer-social-item-youtube {
-  background-color: #ffffff;
-  background-image: url("../images/youtube.svg");
-  background-size: 22px 17px;
-  width:22px;
-  height: 17px;
-  display: block;
-  background-repeat: no-repeat;
+.catalog-filter {
+  width: 220px;
+  margin-right: 20px;
+  color: #ffffff;
 }
 
-
-
-
-
+.catalog-filter-title {
+  font-size: 20px;
+  line-height: 28px;
+  font-weight: 700;
+  color: #ffffff;
+  text-transform: uppercase;
+}
+.catalog-right-column {
+  width: 700px;
+}
 
 .breadcrumbs-item {
+  display: block;
   background-color: #ffffff;
   background-image: url("../images/house-icon.svg");
   background-size: 12px 12px;
   width:12px;
   height: 12px;
-  display: block;
   background-repeat: no-repeat;
 }
+
+/* кнтопки стиль каталога */
 .button-first {
   background-color: #ffffff;
-  background-image: url("../images/catalog-icon1.svg");
-  background-size: 16px 14px;
-  width:16px;
-  height: 14px;
-  display: block;
-  background-repeat: no-repeat;
-}
-button-second. {
-  background-color: #ffffff;
-  background-image: url("../images/catalog-icon2.svg");
-  background-size: 16px 14px;
-  width:16px;
-  height: 14px;
-  display: block;
-  background-repeat: no-repeat;
-}
-button-third. {
-  background-color: #ffffff;
-  background-image: url("../images/hotel-3.jpg");
+  background-image: url("../images/catalog-icon-1.svg");
   background-size: 16px 14px;
   width:16px;
   height: 14px;
@@ -285,15 +473,68 @@ button-third. {
   background-repeat: no-repeat;
 }
 
+.button-second {
+  background-color: #ffffff;
+  background-image: url("../images/catalog-icon-2.svg");
+  background-size: 16px 14px;
+  width:16px;
+  height: 14px;
+  display: block;
+  background-repeat: no-repeat;
+}
+
+.button-third {
+  background-color: #ffffff;
+  background-image: url("../images/catalog-icon-3.svg");
+  background-size: 16px 14px;
+  width:16px;
+  height: 14px;
+  display: block;
+  background-repeat: no-repeat;
+}
+
+/* каталог текст */
+
 .inner-header-title {
+  color: #ffffff;
   font-size: 60px;
   line-height: 78px;
 }
-.breadcrums-link. {
+
+.breadcrums-link {
   font-size: 20px;
   line-height: 24px;
 }
+
 .catalog-filter-title {
   font-size: 20px;
   line-height: 24px;
+}
+
+.product-card-title {
+  font-size: 24px;
+  line-height: 28px;
+  font-weight: 700;
+}
+
+.explanation {
+  font-size: 18px;
+  line-height: 21px;
+  font-weight: 400;
+}
+
+.product-card-price {
+  font-size: 18px;
+  line-height: 21px;
+  font-weight: 400;
+}
+
+.catalog-subscription {
+  font-size: 30px;
+  line-height: 36px;
+}
+
+.catalog-subscription-explanation {
+  font-size: 22px;
+  line-height: 26px;
 }
