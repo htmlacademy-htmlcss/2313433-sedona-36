@@ -98,6 +98,7 @@ ul. {
 
 .advantages {
   margin-bottom: 58px;
+  text-align: center;
 }
 
 /* иконки поиска и избранного */
@@ -172,9 +173,7 @@ ul. {
 }
 
 /* преимущества */
-.advantages {
-  text-align: center;
-}
+
 
 .visually-hidden {
   position: absolute;
@@ -193,6 +192,7 @@ ul. {
   margin: 0;
   padding: 0;
   text-align: center;
+  list-style-type: none;
   color: #ffffff;
 }
 
@@ -201,6 +201,15 @@ ul. {
   width: 100%;
   background-color: #82B3D3;
   display: flex;
+}
+.advantages-title {
+  margin-top: 0%;
+  margin-bottom: 56;
+  font-size: 30px;
+  line-height: 36px;
+  text-transform: uppercase;
+
+
 }
 
 .advantages-item-dark-blue .advantages-title,
